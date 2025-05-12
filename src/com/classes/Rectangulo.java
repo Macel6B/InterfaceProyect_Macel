@@ -1,22 +1,20 @@
 package com.classes;
 
-public class Triangulo extends FigurasGeometricas implements Figurable{
+public class Rectangulo extends FigurasGeometricas implements Figurable{
 	private double base;
 	private double altura;
-	private double lado;
-	public Triangulo(String nombre, double base, double altura, double lado) {
+	public Rectangulo(String nombre, double base, double altura) {
 		super(nombre);
 		this.base = base;
 		this.altura = altura;
-		this.lado = lado;
 	}//constructor
 	
 	public double calcularArea() {
-		return (getBase()*getAltura())/2;
+		return (getBase()*getAltura());
 	}//calcularArea
 	
 	public double calcularPerimetro() {
-		return (getLado()*3);
+		return ((getBase()*2)+(getAltura()*2));
 	}//calcularPerimetro
 	
 //	public String getNombre() {
@@ -25,31 +23,20 @@ public class Triangulo extends FigurasGeometricas implements Figurable{
 //	public void setNombre(String nombre) {
 //		this.nombre = nombre;
 //	}
-	
 	public double getBase() {
 		return base;
 	}
 	public void setBase(double base) {
 		this.base = base;
 	}
-	
 	public double getAltura() {
 		return altura;
 	}
 	public void setAltura(double altura) {
 		this.altura = altura;
 	}
-	
-	public double getLado() {
-		return lado;
-	}
-	public void setLado(double lado) {
-		this.lado = lado;
-	}
-	
 	@Override
 	public String toString() {
-		return "Triangulo [nombre=" + getNombre() + ", base=" + base + ", altura=" + altura + ", lado=" + lado + "]";
+		return "Rectangulo [nombre=" + getNombre() + ", base=" + base + ", altura=" + altura + "]";
 	}//toString
-}//classTriangulo
-
+}//class Rectangulo
